@@ -1,9 +1,14 @@
-boot       				  /boot       emmc      defaults        defaults
-/dev/block/mmcblk0p2      /cache      ext4      defaults        defaults
-/dev/block/mmcblk0p3      /data       ext4      defaults        defaults
-misc      				  /misc       emmc      defaults        defaults
-recovery  				  /recovery   emmc      defaults        defaults
-/dev/block/mmcblk0p4      /sdcard     vfat      defaults        defaults
-/dev/block/mmcblk0p6      /system     ext4      defaults        defaults
-/dev/block/platform/mtk-msdc.0/by-name/custom     /custom      ext4	defaults	defaults
+# mount point	fstype	device1	[device2]	flags
+/boot	emmc	/dev/block/platform/mtk-msdc.0/11120000.MSDC0/by-name/boot	flags=backup=1
+/cache	ext4	/dev/block/platform/mtk-msdc.0/11120000.MSDC0/by-name/cache	flags=backup=1
+/custom	ext4	/dev/block/platform/mtk-msdc.0/11120000.MSDC0/by-name/custom
+/data	ext4	/dev/block/platform/mtk-msdc.0/11120000.MSDC0/by-name/userdata	flags=backup=1
+#/misc	emmc	misc
+/recovery	emmc	/dev/block/platform/mtk-msdc.0/11120000.MSDC0/by-name/recovery
+/system	ext4	/dev/block/platform/mtk-msdc.0/11120000.MSDC0/by-name/system	flags=backup=1
+/external_sd	vfat	/dev/block/mmcblk1p1	flags=display="Micro SDcard";storage;wipeingui;removable
+/usb_otg         vfat       /dev/block/sda1         /dev/block/sda       flags=display="USB-OTG";storage;wipeingui;removable
 
+#/dev/block/platform/mtk-msdc.0/11120000.MSDC0/by-name/nvdata = WTF?!?
+#/dev/block/platform/mtk-msdc.0/11120000.MSDC0/by-name/protect1 = WTF?!?
+#/dev/block/platform/mtk-msdc.0/11120000.MSDC0/by-name/protect2 = WTF?!?
