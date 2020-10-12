@@ -5,7 +5,7 @@ TARGET_CPU_VARIANT := cortex-a9
 
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x105c0000
 BOARD_FLASH_BLOCK_SIZE := 131072
-
+BOARD_KERNEL_IMAGE_NAME := Image
 TARGET_PREBUILT_KERNEL := device/acepad/a96/kernel
 
 BOARD_MKBOOTIMG_ARGS := --base 80000000 --pagesize 2048 --kernel_offset 00008000 --ramdisk_offset 04000000 --tags_offset 0e000000   --cmdline 'bootopt=64S3,32S1,32S1' --board vKB0C1N 
