@@ -8,7 +8,7 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_KERNEL_IMAGE_NAME := Image
 TARGET_PREBUILT_KERNEL := device/acepad/a96/kernel
 
-BOARD_MKBOOTIMG_ARGS := --base 80000000 --pagesize 2048 --kernel_offset 00008000 --ramdisk_offset 04000000 --tags_offset 0e000000   --cmdline 'bootopt=64S3,32S1,32S1' --board vKB0C1N 
+BOARD_MKBOOTIMG_ARGS := --pagesize 2048 --base 0x80000000 --kernel_offset 0x00008000 --ramdisk_offset 0x04000000 --tags_offset 0x0e000000 --cmdline 'bootopt=64S3,32S1,32S1' --board vKB0C1N 
 
 #MTK common twrp flags
 TW_NO_EXFAT := true
